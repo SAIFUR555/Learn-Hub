@@ -8,13 +8,14 @@
 
     <h2>Student Registration Form</h2>
 
-    <form action="register.php" method="POST">
+    <form action="register.php" >   </form>
         <table border="1" cellspacing="0" cellpadding="8">
             
-            <!-- Personal Information -->
+
             <tr>
                 <th colspan="2">Personal Information</th>
             </tr>
+
             <tr>
                 <td>Full Name:</td>
                 <td><input type="text" name="name" required></td>
@@ -47,7 +48,7 @@
                 </td>
             </tr>
             
-            <!-- Contact Details -->
+            
             <tr>
                 <th colspan="2">Contact Details</th>
             </tr>

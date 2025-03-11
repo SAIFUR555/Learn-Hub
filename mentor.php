@@ -84,42 +84,21 @@
 
   <table>
     <tr>
-      <td><b>Honour's</b></td>
-      <td><label for="subject">Subject:</label></td>
+      <td><b><label for="subject">University Degree:</label><b></td>
       <td><input type="text" id="subject" name="subject"></td>
       <td><label for="institute">Institute:</label></td>
       <td><input type="text" id="institute" name="institute"></td>
       <td><label for="year">Year:</label></td>
-      <td><input type="number" id="year" name="year" max="2025" min="0" required></td>
+      <td><input type="number" id="year" name="year"></td>
     </tr>
     <tr>
-      <td><b>Masters (if any)</b></td>
-      <td><label for="subject">Subject:</label></td>
-      <td><input type="text" id="subject" name="subject"></td>
-      <td><label for="institute">Institute:</label></td>
-      <td><input type="text" id="institute" name="institute"></td>
-      <td><label for="year">Year:</label></td>
-      <td><input type="number" id="year" name="year" max="2025" min="0" required></td>
+      <td><b><label for="school">School:</label></b></td>
+      <td><input type="text" id="school" name="school"></td>
     </tr>
     <tr>
-      <td><b>PhD (if any)</b></td>
-      <td><label for="subject">Subject:</label></td>
-      <td><input type="text" id="subject" name="subject"></td>
-      <td><label for="institute">Institute:</label></td>
-      <td><input type="text" id="institute" name="institute"></td>
-      <td><label for="year">Year:</label></td>
-      <td><input type="number" id="year" name="year" max="2025" min="0" required></td>
+      <td><b><label for="college">College:</label></b></td>
+      <td><input type="text" id="college" name="college"></td>
     </tr>
-    <tr>
-        <td><b><label for="school">School:</label></b></td>
-        <td><input type="text" id="school" name="school"></td>
-    </tr>
-    <tr>
-        <td><b><label for="college">College:</label></b></td>
-        <td><input type="text" id="college" name="college"></td>
-    </tr>
-
-
   </table>
 
   <br><br>
@@ -177,10 +156,12 @@
     <h3>Preferred Time:</h3>
 
     <table>
-      <tr>
-        <td><label for="time">From:</label></td>
-        <td><input type="time" id="time" name="time"></td>
-      </tr>
+    <tr>
+      <td><label for="time_from">From:</label></td>
+      <td><input type="time" id="time_from" name="time_from"></td>
+      <td><label for="time_to">To:</label></td>
+      <td><input type="time" id="time_to" name="time_to"></td>
+    </tr>
     </table>
     
     <br><br>

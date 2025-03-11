@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <title>Mentor's Registration Form</title>
+</head>
+
+
 <body>
 
 <h1>Mentor's Registration Form:</h1>

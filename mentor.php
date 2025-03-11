@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <!--Document Type= HTML5-->
+<html> <!--Root Element-->
 
 <head>
     <title>Mentor's Registration Form</title>
@@ -11,6 +11,11 @@
 <h1>Mentor's Registration Form:</h1>
 
 <form action="action_page.php" method="post" enctype="multipart/form-data">
+  <!-- Create a form that will send the data to action_page.php when submitted. -->
+  <!-- enctype="multipart/form-data" is used for uploading file -->
+
+
+
 
 <h3>Account Information:</h3>
 
@@ -52,7 +57,7 @@
     <tr>
       <td><label for="gender">Gender:</label></td>
       <td>
-        <select id="gender" name="gender">
+        <select id="gender" name="gender"><!--select is used to create a drop-down menu-->
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
@@ -111,7 +116,7 @@
 
  <h3>Experience:</h3> 
 
-   <table boarder="1">
+   <table>
     <tr>
         <td><label for="organization">Organization & Address:</label></td>
         <td><textarea id="organization" name="organization"></textarea></td>
@@ -137,7 +142,6 @@
         <td><input type="checkbox" id="accounting" name="subject[]" value="accounting"><label for="accounting">Accounting</label></td>
         <td><input type="checkbox" id="biology" name="subject[]" value="biology"><label for="biology">Biology</label></td>
         <td><input type="checkbox" id="eee" name="subject[]" value="eee"><label for="eee">EEE</label></td>
-        <td><input type="checkbox" id="chemistry2" name="subject[]" value="chemistry2"><label for="chemistry2">Chemistry</label></td>
       </tr>
     </table>
 

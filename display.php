@@ -1,53 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Details</title>
+</head>
+<body>
+
+<h2>Form Submission Details</h2>
+
 <?php
-// Check if the form data is received through POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "<h2>Student Registration Information</h2>";
-    echo "<table border='1' cellspacing='0' cellpadding='8'>";
+    // Collecting and sanitizing the POST data
+    $name = htmlspecialchars($_POST['name']);
+    $student_id = htmlspecialchars($_POST['student_id']);
+    $dob = htmlspecialchars($_POST['dob']);
+    $gender = htmlspecialchars($_POST['gender']);
+    $nationality = htmlspecialchars($_POST['nationality']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $address = htmlspecialchars($_POST['address']);
+    $emergency_contact = htmlspecialchars($_POST['emergency_contact']);
+    $department = htmlspecialchars($_POST['department']);
+    $education = htmlspecialchars($_POST['education']);
+    $academic_interests = htmlspecialchars($_POST['academic_interests']);
+    $guardian_name = htmlspecialchars($_POST['guardian_name']);
+    $guardian_relationship = htmlspecialchars($_POST['guardian_relationship']);
+    $guardian_phone = htmlspecialchars($_POST['guardian_phone']);
+    $preferred_language = htmlspecialchars($_POST['preferred_language']);
+    $online_experience = htmlspecialchars($_POST['online_experience']);
+    $learning_goals = htmlspecialchars($_POST['learning_goals']);
+    $linkedin = htmlspecialchars($_POST['linkedin']);
+    $github = htmlspecialchars($_POST['github']);
+    $contact_method = htmlspecialchars($_POST['contact_method']);
+    $employed = htmlspecialchars($_POST['employed']);
+    $hobbies = htmlspecialchars($_POST['hobbies']);
+    $course_time = htmlspecialchars($_POST['course_time']);
+    $course_fee = htmlspecialchars($_POST['course_fee']);
+    $payment_method = htmlspecialchars($_POST['payment_method']);
+    $payment_status = htmlspecialchars($_POST['payment_status']);
 
-    // Display the submitted form values
-    echo "<tr><th>Full Name:</th><td>" . htmlspecialchars($_POST['name']) . "</td></tr>";
-    echo "<tr><th>Student ID:</th><td>" . htmlspecialchars($_POST['student_id']) . "</td></tr>";
-    echo "<tr><th>Date of Birth:</th><td>" . htmlspecialchars($_POST['dob']) . "</td></tr>";
+    // Displaying the submitted data
+    echo "<h3>Student Information:</h3>";
+    echo "<p><strong>Name:</strong> $name</p>";
+    echo "<p><strong>Student ID:</strong> $student_id</p>";
+    echo "<p><strong>Date of Birth:</strong> $dob</p>";
+    echo "<p><strong>Gender:</strong> $gender</p>";
+    echo "<p><strong>Nationality:</strong> $nationality</p>";
+    echo "<p><strong>Email:</strong> $email</p>";
+    echo "<p><strong>Phone:</strong> $phone</p>";
+    echo "<p><strong>Address:</strong> $address</p>";
+    echo "<p><strong>Emergency Contact:</strong> $emergency_contact</p>";
+    
+    echo "<h3>Department & Background:</h3>";
+    echo "<p><strong>Department:</strong> $department</p>";
+    echo "<p><strong>Previous Education:</strong> $education</p>";
+    echo "<p><strong>Academic Interests:</strong> $academic_interests</p>";
+    
+    echo "<h3>Parent/Guardian Information:</h3>";
+    echo "<p><strong>Guardian's Name:</strong> $guardian_name</p>";
+    echo "<p><strong>Relationship:</strong> $guardian_relationship</p>";
+    echo "<p><strong>Guardian's Contact:</strong> $guardian_phone</p>";
+    
+    echo "<h3>Course Preferences:</h3>";
+    echo "<p><strong>Preferred Language:</strong> $preferred_language</p>";
+    echo "<p><strong>Online Course Experience:</strong> $online_experience</p>";
+    echo "<p><strong>Learning Goals:</strong> $learning_goals</p>";
+    
+    echo "<h3>Social Media & Communication:</h3>";
+    echo "<p><strong>LinkedIn:</strong> $linkedin</p>";
+    echo "<p><strong>GitHub:</strong> $github</p>";
+    echo "<p><strong>Preferred Contact Method:</strong> $contact_method</p>";
+    
+    echo "<h3>Additional Information:</h3>";
+    echo "<p><strong>Employed:</strong> $employed</p>";
+    echo "<p><strong>Hobbies:</strong> $hobbies</p>";
+    
+    echo "<h3>Course Time & Payment:</h3>";
+    echo "<p><strong>Preferred Course Time:</strong> $course_time</p>";
+    echo "<p><strong>Course Fee:</strong> $course_fee</p>";
+    echo "<p><strong>Preferred Payment Method:</strong> $payment_method</p>";
+    echo "<p><strong>Payment Status:</strong> $payment_status</p>";
 
-    // Gender radio buttons
-    echo "<tr><th>Gender:</th><td>" . htmlspecialchars($_POST['gender']) . "</td></tr>";
-
-    // Nationality dropdown
-    echo "<tr><th>Nationality:</th><td>" . htmlspecialchars($_POST['nationality']) . "</td></tr>";
-
-    // Contact details
-    echo "<tr><th>Email:</th><td>" . htmlspecialchars($_POST['email']) . "</td></tr>";
-    echo "<tr><th>Phone:</th><td>" . htmlspecialchars($_POST['phone']) . "</td></tr>";
-    echo "<tr><th>Address:</th><td>" . htmlspecialchars($_POST['address']) . "</td></tr>";
-
-    // Department and background
-    echo "<tr><th>Department:</th><td>" . htmlspecialchars($_POST['department']) . "</td></tr>";
-    echo "<tr><th>Previous Education:</th><td>" . htmlspecialchars($_POST['education']) . "</td></tr>";
-
-    // Guardian details
-    echo "<tr><th>Guardian's Name:</th><td>" . htmlspecialchars($_POST['guardian_name']) . "</td></tr>";
-    echo "<tr><th>Guardian's Contact:</th><td>" . htmlspecialchars($_POST['guardian_phone']) . "</td></tr>";
-
-    // Course preferences
-    echo "<tr><th>Preferred Language:</th><td>" . htmlspecialchars($_POST['preferred_language']) . "</td></tr>";
-    echo "<tr><th>Have You Taken Online Courses Before:</th><td>" . htmlspecialchars($_POST['online_experience']) . "</td></tr>";
-
-    // Social Media & Communication
-    echo "<tr><th>LinkedIn Profile:</th><td>" . htmlspecialchars($_POST['linkedin']) . "</td></tr>";
-    echo "<tr><th>GitHub Profile:</th><td>" . htmlspecialchars($_POST['github']) . "</td></tr>";
-
-    // Additional fields
-    echo "<tr><th>Hobbies/Interests:</th><td>" . htmlspecialchars($_POST['hobbies']) . "</td></tr>";
-
-    // Course Time & Payment
-    echo "<tr><th>Preferred Course Time:</th><td>" . htmlspecialchars($_POST['course_time']) . "</td></tr>";
-    echo "<tr><th>Course Fee:</th><td>" . htmlspecialchars($_POST['course_fee']) . "</td></tr>";
-    echo "<tr><th>Preferred Payment Method:</th><td>" . htmlspecialchars($_POST['payment_method']) . "</td></tr>";
-    echo "<tr><th>Payment Status:</th><td>" . htmlspecialchars($_POST['payment_status']) . "</td></tr>";
-
-    echo "</table>";
-}
-else {
-    echo "<p>No data submitted yet.</p>";
+    echo "<p>Your account has been created successfully!</p>";
+} else {
+    echo "<p>No data submitted.</p>";
 }
 ?>
+
+</body>
+</html>

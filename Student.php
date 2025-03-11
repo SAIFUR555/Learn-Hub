@@ -8,21 +8,18 @@
 
     <h2>Student Registration Form</h2>
 
-    <form action="register.php" >   </form>
-        <table border="1" cellspacing="0" cellpadding="8">
-            
-
+    <form action="display.php" method="post">   
+        <table border="3" cellspacing="5" cellpadding="10">
             <tr>
-                <th colspan="2">Personal Information</th>
+                <th>Personal Information</th>
             </tr>
-
             <tr>
                 <td>Full Name:</td>
                 <td><input type="text" name="name" required></td>
             </tr>
             <tr>
                 <td>Student ID:</td>
-                <td><input type="text" name="student_id" required></td>
+                <td><input type="number" name="student_id" required></td>
             </tr>
             <tr>
                 <td>Date of Birth:</td>
@@ -43,14 +40,13 @@
                         <option value="bangladeshi">Bangladeshi</option>
                         <option value="indian">Indian</option>
                         <option value="pakistani">Pakistani</option>
+                       <option value="Chinis">China</option>
                         <option value="other">Other</option>
                     </select>
                 </td>
             </tr>
-            
-            
             <tr>
-                <th colspan="2">Contact Details</th>
+                <th>Contact Details</th>
             </tr>
             <tr>
                 <td>Email:</td>
@@ -69,9 +65,8 @@
                 <td><input type="tel" name="emergency_contact"></td>
             </tr>
 
-            <!-- Department Selection -->
             <tr>
-                <th colspan="2">Department & Background</th>
+                <th>Department & Background</th>
             </tr>
             <tr>
                 <td>Department:</td>
@@ -87,16 +82,15 @@
             </tr>
             <tr>
                 <td>Previous Education:</td>
-                <td><input type="text" name="education" placeholder="HSC/ A-levels / Diploma" required></td>
+                <td><input type="text" name="education"  required></td>
             </tr>
             <tr>
                 <td>Academic Interests:</td>
-                <td><input type="text" name="academic_interests" placeholder="E.g., Software Development, Data Science"></td>
+                <td><input type="text" name="academic_interests" placeholder="E.g. :Software Development"></td>
             </tr>
 
-            <!-- Parent/Guardian Information -->
             <tr>
-                <th colspan="2">Parent/Guardian Information</th>
+                <th>Parent/Guardian Information</th>
             </tr>
             <tr>
                 <td>Guardian's Name:</td>
@@ -118,10 +112,8 @@
                 <td>Guardian's Contact:</td>
                 <td><input type="tel" name="guardian_phone" required></td>
             </tr>
-
-            <!-- Course Preferences -->
             <tr>
-                <th colspan="2">Course Preferences</th>
+                <th>Course Preferences</th>
             </tr>
             <tr>
                 <td>Preferred Language:</td>
@@ -146,8 +138,6 @@
                 <td>Learning Goals:</td>
                 <td><textarea name="learning_goals" rows="3"></textarea></td>
             </tr>
-
-            <!-- Social Media & Communication -->
             <tr>
                 <th colspan="2">Social Media & Communication</th>
             </tr>
@@ -170,7 +160,6 @@
                 </td>
             </tr>
 
-            <!-- Additional Details -->
             <tr>
                 <th colspan="2">Additional Information</th>
             </tr>
@@ -186,7 +175,6 @@
                 <td><textarea name="hobbies" rows="3"></textarea></td>
             </tr>
 
-            <!-- Course Time & Payment Details -->
             <tr>
                 <th colspan="2">Course Time & Payment</th>
             </tr>
@@ -224,7 +212,6 @@
                 </td>
             </tr>
 
-            <!-- Submit & Reset -->
             <tr>
                 <td colspan="2" align="center">
                     <input type="submit" value="Register">

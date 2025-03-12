@@ -9,7 +9,7 @@
     <h2>Student Registration Form</h2>
 
     <form action="display.php" method="post">   
-        <table border="3" cellspacing="5" cellpadding="10">
+        <table border="3">
             <tr>
                 <th>Personal Information</th>
             </tr>

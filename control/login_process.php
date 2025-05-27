@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $student_id = trim($_POST['student_id']);
     $password = trim($_POST['password']);
 
-    // Create DB connection
-    $conn = createConnObj();
+    // Use global $conn from studentdb.php
+    global $conn;
 
     // Use procedural way function for authentication
     $result = authenticateStudent($conn, $student_id, $password);

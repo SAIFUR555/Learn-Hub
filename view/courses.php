@@ -1,10 +1,8 @@
 <?php
 session_start();
 
-require_once('../model/studentdb.php');
-
-// Create DB connection
-$conn = createConnObj();
+include('../model/studentdb.php');
+global $conn;
 
 // Redirect if not logged in
 if (!isset($_SESSION['student_id']) || !isset($_SESSION['password'])) {
@@ -48,7 +46,7 @@ if (!$result) {
         </tr>
     </thead>
     <tbody>
-        <?php while ($course = mysqli_fetch_assoc($result)): ?>
+        <?php foreach ($result as $course): ?>
         <tr>
             <td><?php echo htmlspecialchars($course['course_id']); ?></td>
             <td><?php echo htmlspecialchars($course['course_name']); ?></td>
@@ -61,7 +59,7 @@ if (!$result) {
                 </form>
             </td>
         </tr>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
     </tbody>
 </table>
 

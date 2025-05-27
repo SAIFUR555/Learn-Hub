@@ -1,10 +1,7 @@
-
 <?php
 session_start();
-require_once('../Model/studentdb.php');
-
-// Create DB connection
-$conn = createConnObj();
+include('../model/studentdb.php');
+global $conn;
 
 // Redirect if not logged in
 if (!isset($_SESSION['student_id']) || !isset($_SESSION['password'])) {
@@ -16,11 +13,9 @@ $student_id = $_SESSION['student_id'];
 $password = $_SESSION['password'];
 
 // Fetch student info using model function
-$result = getStudentByIdAndPassword($conn, $student_id, $password);
+$student = getStudentByIdAndPassword($conn, $student_id, $password);
 
-if (mysqli_num_rows($result) === 1) {
-    $student = mysqli_fetch_assoc($result);
-} else {
+if (!$student) {
     echo "Invalid student ID or password.";
     exit();
 }

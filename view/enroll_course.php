@@ -1,23 +1,25 @@
 <?php
 session_start();
-require_once('../Model/studentdb.php');
+include('../model/studentdb.php');
+global $conn;
 
 if (!isset($_SESSION['student_id'])) {
     header("Location: login.php");
     exit();
 }
 
-$conn = createConnObj();
 $student_id = $_SESSION['student_id'];
 
 // Enroll course
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['course_id'])) {
     $course_id = $_POST['course_id'];
 
+    // Fix: getEnrolledCourses returns an array, but isStudentEnrolled expects course_id as string
     if (isStudentEnrolled($conn, $student_id, $course_id)) {
         $message = "<p style='color:red;'>You have already enrolled in this course.</p>";
     } else {
-        if (enrollStudentInCourse($conn, $student_id, $course_id)) {
+        // enrollStudentInCourse returns true/false, but may not return true on success if using mysqli_query
+        if (enrollStudentInCourse($conn, $student_id, $course_id) === true || enrollStudentInCourse($conn, $student_id, $course_id) == 1) {
             $message = "<p style='color:green;'>Successfully enrolled in the course!</p>";
         } else {
             $message = "<p style='color:red;'>Error enrolling: " . mysqli_error($conn) . "</p>";
@@ -38,8 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['unenroll_course_id']))
 
 // Fetch enrolled courses
 $enrolledCourses = getEnrolledCourses($conn, $student_id);
-
-mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ mysqli_close($conn);
         </tr>
     </thead>
     <tbody>
-        <?php while ($row = mysqli_fetch_assoc($enrolledCourses)): ?>
+        <?php foreach ($enrolledCourses as $row): ?>
         <tr>
             <td><?php echo htmlspecialchars($row['course_id']); ?></td>
             <td><?php echo htmlspecialchars($row['course_name']); ?></td>
@@ -80,7 +80,7 @@ mysqli_close($conn);
                 </form>
             </td>
         </tr>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
     </tbody>
 </table>
 

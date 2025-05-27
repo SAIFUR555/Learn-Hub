@@ -8,7 +8,7 @@ if (!isset($_SESSION["student_id"])) {
 }
 
 include('../model/studentdb.php'); // Include database connection and functions
-$conn = createConnObj(); // Create a database connection
+global $conn; // Use global $conn from studentdb.php
 $student_id = $_SESSION["student_id"]; // Get student ID from session
 
 // If the form was submitted (POST request)
@@ -65,9 +65,6 @@ if (isset($_FILES["student_picture"]) && $_FILES["student_picture"]["error"] == 
     $result = getStudentProfileById($conn, $student_id);
     $student = mysqli_fetch_assoc($result);
 }
-
-// Close the database connection
-closeConn($conn);
 
 //student data jdi pawa na jay   show error
 if (!$student) {
@@ -160,7 +157,7 @@ if (!$student) {
                 <tr>
                     <td colspan="2">
                         <input type="submit" value="Update Profile"> <!-- Submit button -->
-                        <button type="button" class="back-btn" onclick="window.history.back();">Back</button> <!-- Back button -->
+                        <a href="dashboard.php" class="back-btn"><button type="button">Back</button></a> <!-- Back button -->
                     </td>
                 </tr>
             </table>

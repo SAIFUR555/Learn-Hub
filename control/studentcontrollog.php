@@ -91,7 +91,7 @@ if (isset($_POST["Submit"])) {
         empty($genderError) && empty($emailError) && empty($phoneError) &&
         empty($passwordError)
     ) {
-        $conn = createConnObj();
+        global $conn;
         $table = "student";
 
         // Removed image upload logic
@@ -116,7 +116,7 @@ if (isset($_POST["Submit"])) {
             "" // Pass empty string for student_picture
         );
 
-        closeConn($conn);
+        // No need to close connection, handled globally
 
         if ($result === true) {
             header("Location: ../view/success.php");

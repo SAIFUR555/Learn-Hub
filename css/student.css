@@ -1,0 +1,117 @@
+/* Selector for body */
+body {
+  font-family: Times;
+   margin: 5px;
+     padding: 10px;
+ background-color: #bb7171; /* Skin color background */
+
+}
+
+/* Selector for form container */
+.form-container
+
+{
+ width: 75%;
+    margin: 0 auto;
+    position: relative;
+    top : 15px;
+    padding: 30px;
+    background-color: rgb(93, 82, 110); /* Purple background */
+    border-radius: 8px;
+    max-width: 700px;
+
+}
+
+/* Selector for table */
+table {
+    width: 100%;
+    margin-top: 20px;
+   
+}
+
+/* Selector for table headers */
+th {
+    text-align: center;
+    background-color: #e0b590; /* Green header background */
+    color: rgb(255, 255, 255); /* White text */
+    padding: 10px;
+}
+
+/* Selector for table data */
+td {
+    padding: 8px;
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+/* Selector for input fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #b47676; /* Light red border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Input Submit Button */
+input[type="submit"] {
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; 
+    font-size: 16px;
+    width: 100%; 
+    margin-top: 15px;
+}
+
+/* Submit Button Hover effect */
+input[type="submit"]:hover {
+    background-color: #0056b3 ; /* Ensure hover color is applied */
+}
+
+/* Override Submit Button Hover effect */
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3; /* Ensure hover color is applied */
+}
+
+/* Reset Button */
+input[type="reset"] {
+    background-color: #d6a40d; /* Yellow background */
+    color: black; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; 
+    font-size: 16px;
+}
+
+/* Reset Button Hover effect */
+input[type="reset"]:hover {
+    background-color: #FFA000 !important; /* Ensure hover color is applied */
+}
+
+/* Override Reset Button Hover effect */
+.form-container input[type="reset"]:hover {
+    background-color: #FFA000; /* Ensure hover color is applied */
+}
+
+/* Selector for h elements */
+h2{
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    margin: 0px; /* Consistent margin */
+    color: #333; /* Dark gray text */
+}
+
+
+

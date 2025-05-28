@@ -1,0 +1,113 @@
+/* studentprofile.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafc;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+form input[type="radio"] {
+    margin-right: 6px;
+}
+
+form .gender-group {
+    margin-bottom: 18px;
+}
+
+form img {
+    margin-top: 10px;
+    max-width: 120px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: block;
+}
+
+form input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.back-btn {
+    background-color: #95a5a6 !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    margin-left: 10px !important;
+    transition: background-color 0.3s ease !important;
+    display: inline-block !important;
+}
+
+.back-btn:hover {
+    background-color: #7f8c8d !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    form {
+        padding: 20px 15px;
+    }
+}

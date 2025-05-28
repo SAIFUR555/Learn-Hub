@@ -1,0 +1,104 @@
+/* Base layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+    color: #333;
+}
+
+/* Message styles */
+p {
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+p[style*="color:green"] {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+p[style*="color:red"] {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Link button */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Table styling */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Headings */
+h2, h3 {
+    margin-top: 20px;
+    color: #444;
+}
+
+/* Button styles */
+button {
+    padding: 8px 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button[type="submit"] {
+    background-color: #28a745; /* green for enroll */
+    color: white;
+}
+
+form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Unenroll button override */
+form button.unenroll {
+    background-color: crimson;
+}
+
+form button.unenroll:hover {
+    background-color: #a30000;
+}

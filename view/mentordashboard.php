@@ -44,19 +44,19 @@ if (isset($_SESSION['username'])) {
 
 <h3>Update Email</h3>
 <form method="post">
-    <input type="email" name="new_email" placeholder="New Email" required>
+    <input type="email" name="new_email" placeholder="New Email" >
     <input type="submit" value="Update Email">
 </form>
 
 <h3>Update Phone</h3>
 <form method="post">
-    <input type="text" name="new_phone" placeholder="New Phone (11 digits)" pattern="\d{11}" required>
+    <input type="text" name="new_phone" placeholder="New Phone (11 digits)" >
     <input type="submit" value="Update Phone">
 </form>
 
 <h3>Update Present Address</h3>
 <form method="post">
-    <textarea name="new_Paddress" placeholder="Enter new present address" required></textarea>
+    <textarea name="new_Paddress" placeholder="Enter new present address" ></textarea>
     <br>
     <input type="submit" value="Update Present Address">
 </form>

@@ -20,6 +20,8 @@ include '../control/mentorloginaction.php';
         <tr>
             <td><label for="password">Password:</label></td>
             <td><input type="password" name="password" id="password" required></td>
+            <!--123456-->
+            <!--222222-->
         </tr>
         <tr>
             <td colspan="2">

@@ -1,0 +1,4 @@
+Login page test : py "c:\Users\Admin\Downloads\Test login.py"
+edit studentinfo : py "C:\Users\Admin\Downloads\Test Student Profile.py"
+Course Enrollment: py "c:\Users\Admin\Downloads\Test Course Enrollment.py"
+Registration page :  py "C:\Users\Admin\Downloads\Test Registration.py"

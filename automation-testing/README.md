@@ -7,6 +7,7 @@ Tested Features:
 - Student Registration
 - Student Login
 - Course Enrollment
+- Student Profile
 
 Tools & Technologies:
 - Python
